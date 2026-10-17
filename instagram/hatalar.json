@@ -1,0 +1,461 @@
+[
+ {
+  "id": 1,
+  "kategori": "Edat",
+  "baslik": "\"Onunla evli\" derken",
+  "yanlis": "She is married with Tom.",
+  "dogru": "She is married to Tom.",
+  "neden": "Türkçedeki \"ile\" bizi \"with\"e götürüyor. İngilizcede evlilik \"to\" ile kurulur.",
+  "bonus": "They got married in 2020."
+ },
+ {
+  "id": 2,
+  "kategori": "Zaman",
+  "baslik": "\"Katılıyorum\" derken",
+  "yanlis": "I am agree.",
+  "dogru": "I agree.",
+  "neden": "\"Agree\" zaten bir fiil, yanına \"am\" gelmez. Türkçedeki \"katılıyor-um\" eki bizi yanıltıyor.",
+  "bonus": "I totally agree. · I couldn't agree more."
+ },
+ {
+  "id": 3,
+  "kategori": "Kelime",
+  "baslik": "\"Ödev yapmak\" derken",
+  "yanlis": "I make my homework.",
+  "dogru": "I do my homework.",
+  "neden": "Türkçede ikisi de \"yapmak\". İngilizcede iş, görev ve ödev için \"do\" kullanılır.",
+  "bonus": "do the dishes · do the shopping"
+ },
+ {
+  "id": 4,
+  "kategori": "Sıfat",
+  "baslik": "\"Sıkıldım\" derken",
+  "yanlis": "I'm boring.",
+  "dogru": "I'm bored.",
+  "neden": "-ing hissettireni, -ed hissedeni anlatır. \"I'm boring\" = \"Ben sıkıcı biriyim.\"",
+  "bonus": "The film was boring, so I was bored."
+ },
+ {
+  "id": 5,
+  "kategori": "Edat",
+  "baslik": "\"Müzik dinlemek\" derken",
+  "yanlis": "I listen music.",
+  "dogru": "I listen to music.",
+  "neden": "\"Listen\" bir şeyi dinlerken hep \"to\" ister. Türkçede \"müziğ-i\" eki işi görüyor, İngilizcede edat gerekiyor.",
+  "bonus": "Listen to me! · I'm listening."
+ },
+ {
+  "id": 6,
+  "kategori": "Artikel",
+  "baslik": "\"Öğrenciyim\" derken",
+  "yanlis": "I am student.",
+  "dogru": "I am a student.",
+  "neden": "Türkçede artikel yok. İngilizcede tekil, sayılabilen bir meslek ya da kimlikten önce \"a/an\" gelir.",
+  "bonus": "She is an engineer."
+ },
+ {
+  "id": 7,
+  "kategori": "Zaman",
+  "baslik": "\"2020'den beri burada yaşıyorum\" derken",
+  "yanlis": "I live here since 2020.",
+  "dogru": "I have lived here since 2020.",
+  "neden": "Türkçede \"-dır\" ile anlatılan, geçmişte başlayıp hâlâ süren durumlar İngilizcede present perfect ister.",
+  "bonus": "I've been living here since 2020."
+ },
+ {
+  "id": 8,
+  "kategori": "Kelime",
+  "baslik": "\"Hata yapmak\" derken",
+  "yanlis": "I did a mistake.",
+  "dogru": "I made a mistake.",
+  "neden": "Hata için \"make\" kullanılır. Bir şeyi ortaya çıkarıyorsan genelde \"make\".",
+  "bonus": "make a decision · make a plan"
+ },
+ {
+  "id": 9,
+  "kategori": "Edat",
+  "baslik": "\"Bana açıkla\" derken",
+  "yanlis": "Can you explain me?",
+  "dogru": "Can you explain it to me?",
+  "neden": "\"Explain\" kişiyi doğrudan almaz. Önce açıklanan şey, sonra \"to me\" gelir.",
+  "bonus": "Can you explain this word to me?"
+ },
+ {
+  "id": 10,
+  "kategori": "Zamir",
+  "baslik": "\"O\" derken",
+  "yanlis": "My mother is a teacher. He loves his job.",
+  "dogru": "My mother is a teacher. She loves her job.",
+  "neden": "Türkçedeki \"o\" cinsiyetsiz. İngilizcede kadın için \"she/her\", erkek için \"he/his\" seçmek gerekir.",
+  "bonus": "My brother and his wife"
+ },
+ {
+  "id": 11,
+  "kategori": "Soru",
+  "baslik": "\"Nereye gidiyorsun?\" derken",
+  "yanlis": "Where you are going?",
+  "dogru": "Where are you going?",
+  "neden": "Soru cümlesinde yardımcı fiil öznenin önüne geçer: are you, is she, do they.",
+  "bonus": "What are you doing?"
+ },
+ {
+  "id": 12,
+  "kategori": "Kelime",
+  "baslik": "\"Işığı kapat\" derken",
+  "yanlis": "Close the light.",
+  "dogru": "Turn off the light.",
+  "neden": "Türkçede ışık ve televizyon \"açılıp kapanır\". İngilizcede elektrikli şeyler \"turn on / turn off\" olur.",
+  "bonus": "Turn on the TV. · Turn off your phone."
+ },
+ {
+  "id": 13,
+  "kategori": "Edat",
+  "baslik": "\"Bir şeye bağlı\" derken",
+  "yanlis": "It depends of the weather.",
+  "dogru": "It depends on the weather.",
+  "neden": "\"Depend\" her zaman \"on\" ile kullanılır.",
+  "bonus": "It depends. = Duruma göre değişir."
+ },
+ {
+  "id": 14,
+  "kategori": "Çoğul",
+  "baslik": "\"İki kitap\" derken",
+  "yanlis": "I bought two book.",
+  "dogru": "I bought two books.",
+  "neden": "Türkçede sayıdan sonra çoğul eki gelmez (iki kitap). İngilizcede birden fazlaysa -s şart.",
+  "bonus": "three days · five people"
+ },
+ {
+  "id": 15,
+  "kategori": "Kelime",
+  "baslik": "\"Fotoğraf çekmek\" derken",
+  "yanlis": "Can you pull a photo?",
+  "dogru": "Can you take a photo?",
+  "neden": "\"Çekmek\"i birebir çevirme. Fotoğraf İngilizcede \"take\" edilir.",
+  "bonus": "Can you take a photo of us?"
+ },
+ {
+  "id": 16,
+  "kategori": "Sayılamayan",
+  "baslik": "\"Bilgiler\" derken",
+  "yanlis": "I need some informations.",
+  "dogru": "I need some information.",
+  "neden": "\"Information\" sayılamaz, -s almaz. Advice, furniture ve luggage da öyle.",
+  "bonus": "a piece of advice"
+ },
+ {
+  "id": 17,
+  "kategori": "Edat",
+  "baslik": "\"İngilizcede iyiyim\" derken",
+  "yanlis": "I'm good in English.",
+  "dogru": "I'm good at English.",
+  "neden": "Bir beceride iyi olmak \"good at\" ile söylenir. \"-de\" ekini \"in\" diye çevirme.",
+  "bonus": "I'm bad at math."
+ },
+ {
+  "id": 18,
+  "kategori": "Olumsuz",
+  "baslik": "\"Kimse gelmedi\" derken",
+  "yanlis": "Nobody didn't come.",
+  "dogru": "Nobody came.",
+  "neden": "Türkçede \"kimse\" olumsuz fiille gelir. İngilizcede \"nobody\" zaten olumsuz, fiil olumlu kalır.",
+  "bonus": "I saw nobody. = I didn't see anybody."
+ },
+ {
+  "id": 19,
+  "kategori": "Kelime",
+  "baslik": "\"Ödünç verir misin?\" derken",
+  "yanlis": "Can you borrow me your pen?",
+  "dogru": "Can you lend me your pen?",
+  "neden": "Türkçede ikisi de \"ödünç\". Veren \"lend\", alan \"borrow\" der.",
+  "bonus": "Can I borrow your pen?"
+ },
+ {
+  "id": 20,
+  "kategori": "Yalancı eş",
+  "baslik": "\"Çok sempatik\" derken",
+  "yanlis": "She is very sympathetic.",
+  "dogru": "She is very likeable.",
+  "neden": "\"Sympathetic\" anlayışlı, dertlerine ortak olan demek. Sevimli, cana yakın için \"likeable\", \"nice\" ya da \"friendly\" kullan.",
+  "bonus": "He's really friendly."
+ },
+ {
+  "id": 21,
+  "kategori": "Edat",
+  "baslik": "\"Eve gidiyorum\" derken",
+  "yanlis": "I'm going to home.",
+  "dogru": "I'm going home.",
+  "neden": "\"Home\" yön bildirirken edat almaz. \"to\" kullanılmaz.",
+  "bonus": "I'm at home. (evdeyim)"
+ },
+ {
+  "id": 22,
+  "kategori": "Soru",
+  "baslik": "\"Bu ne demek?\" derken",
+  "yanlis": "What means this?",
+  "dogru": "What does this mean?",
+  "neden": "Geniş zamanlı sorularda \"do/does\" gerekir ve fiil yalın kalır.",
+  "bonus": "What does \"awkward\" mean?"
+ },
+ {
+  "id": 23,
+  "kategori": "Kelime",
+  "baslik": "\"Para kazanmak\" derken",
+  "yanlis": "I win 2000 euros a month.",
+  "dogru": "I earn 2000 euros a month.",
+  "neden": "Türkçede ikisi de \"kazanmak\". Çalışarak kazanılan para \"earn\", yarışma ve piyango \"win\".",
+  "bonus": "She won the lottery."
+ },
+ {
+  "id": 24,
+  "kategori": "Zaman",
+  "baslik": "\"3 yıldır\" derken",
+  "yanlis": "I have worked here since 3 years.",
+  "dogru": "I have worked here for 3 years.",
+  "neden": "Süre için \"for\", başlangıç noktası için \"since\" kullanılır.",
+  "bonus": "for 2 hours · since Monday"
+ },
+ {
+  "id": 25,
+  "kategori": "Kelime",
+  "baslik": "\"Spor yapmak\" derken",
+  "yanlis": "I make sport every day.",
+  "dogru": "I do sport every day.",
+  "neden": "Spor ve egzersiz \"do\" ile söylenir. Günlük konuşmada \"I work out\" daha doğal durur.",
+  "bonus": "I go to the gym. · I work out."
+ },
+ {
+  "id": 26,
+  "kategori": "Edat",
+  "baslik": "\"Bir şeyle ilgileniyorum\" derken",
+  "yanlis": "I'm interested about history.",
+  "dogru": "I'm interested in history.",
+  "neden": "\"Interested\" her zaman \"in\" ile kullanılır.",
+  "bonus": "Are you interested in the job?"
+ },
+ {
+  "id": 27,
+  "kategori": "Kelime",
+  "baslik": "\"Bana söyle\" derken",
+  "yanlis": "Say me the truth.",
+  "dogru": "Tell me the truth.",
+  "neden": "\"Tell\" kişiyi doğrudan alır (tell me). \"Say\" kişiyi almaz (say something).",
+  "bonus": "She said hello. · She told me a story."
+ },
+ {
+  "id": 28,
+  "kategori": "Soru",
+  "baslik": "\"İstasyon nerede biliyor musun?\" derken",
+  "yanlis": "Do you know where is the station?",
+  "dogru": "Do you know where the station is?",
+  "neden": "Soru başka bir cümlenin içindeyse düz cümle sırasına döner.",
+  "bonus": "Can you tell me what time it is?"
+ },
+ {
+  "id": 29,
+  "kategori": "Kelime",
+  "baslik": "\"Çocuğa bakmak\" derken",
+  "yanlis": "I look at my little brother.",
+  "dogru": "I look after my little brother.",
+  "neden": "\"Look at\" gözle bakmak. Birinin bakımını üstlenmek \"look after\".",
+  "bonus": "Can you look after my cat this weekend?"
+ },
+ {
+  "id": 30,
+  "kategori": "Yalancı eş",
+  "baslik": "\"Kontrol etmek\" derken",
+  "yanlis": "Can you control my homework?",
+  "dogru": "Can you check my homework?",
+  "neden": "\"Control\" yönetmek, hâkim olmak anlamına gelir. Gözden geçirmek, doğruluğunu kontrol etmek \"check\".",
+  "bonus": "Let me check. = Bir bakayım."
+ },
+ {
+  "id": 31,
+  "kategori": "Edat",
+  "baslik": "\"İstanbul'a vardım\" derken",
+  "yanlis": "I arrived to Istanbul.",
+  "dogru": "I arrived in Istanbul.",
+  "neden": "\"Arrive\" \"to\" almaz. Şehir ve ülke için \"in\", bina ve nokta için \"at\" kullanılır.",
+  "bonus": "We arrived at the airport."
+ },
+ {
+  "id": 32,
+  "kategori": "Artikel",
+  "baslik": "\"Hayat güzel\" derken",
+  "yanlis": "The life is beautiful.",
+  "dogru": "Life is beautiful.",
+  "neden": "Genel kavramlardan söz ederken \"the\" kullanılmaz: life, love, music, people.",
+  "bonus": "Money isn't everything."
+ },
+ {
+  "id": 33,
+  "kategori": "Kelime",
+  "baslik": "\"Parti yapmak\" derken",
+  "yanlis": "Let's make a party.",
+  "dogru": "Let's have a party.",
+  "neden": "Parti \"have\" ya da \"throw\" edilir. \"Make\" doğal durmaz.",
+  "bonus": "We're throwing a party on Friday."
+ },
+ {
+  "id": 34,
+  "kategori": "Zaman",
+  "baslik": "\"Dün gittim\" derken",
+  "yanlis": "I have gone there yesterday.",
+  "dogru": "I went there yesterday.",
+  "neden": "Geçmişte belli bir zaman söylüyorsan (yesterday, last week) present perfect kullanılmaz.",
+  "bonus": "I've been there before. (zaman yok)"
+ },
+ {
+  "id": 35,
+  "kategori": "Edat",
+  "baslik": "\"Köpekten korkuyorum\" derken",
+  "yanlis": "I'm afraid from dogs.",
+  "dogru": "I'm afraid of dogs.",
+  "neden": "Türkçedeki \"-den\" eki \"from\" gibi görünse de \"afraid\" her zaman \"of\" ister.",
+  "bonus": "I'm scared of spiders."
+ },
+ {
+  "id": 36,
+  "kategori": "Kelime",
+  "baslik": "\"Sınava girmek\" derken",
+  "yanlis": "I will enter the exam tomorrow.",
+  "dogru": "I will take the exam tomorrow.",
+  "neden": "Sınava \"girilmez\", sınav \"alınır\": take an exam. Geçmek \"pass\", kalmak \"fail\".",
+  "bonus": "I passed! · I failed the test."
+ },
+ {
+  "id": 37,
+  "kategori": "Zaman",
+  "baslik": "\"Biliyorum\" derken",
+  "yanlis": "I am knowing the answer.",
+  "dogru": "I know the answer.",
+  "neden": "Know, like, want, need gibi durum fiilleri -ing almaz. Türkçedeki \"-yor\" eki yanıltıyor.",
+  "bonus": "I need help. · I want coffee."
+ },
+ {
+  "id": 38,
+  "kategori": "Edat",
+  "baslik": "\"Pazartesi\" derken",
+  "yanlis": "See you in Monday.",
+  "dogru": "See you on Monday.",
+  "neden": "Günler ve tarihler \"on\", aylar ve yıllar \"in\", saatler \"at\" ile söylenir.",
+  "bonus": "in May · on May 5th · at 9 pm"
+ },
+ {
+  "id": 39,
+  "kategori": "Çoğul",
+  "baslik": "\"Saçlarım\" derken",
+  "yanlis": "My hair are long.",
+  "dogru": "My hair is long.",
+  "neden": "Türkçede \"saçlar\" çoğul olabilir ama İngilizcede başındaki saç tekil sayılır.",
+  "bonus": "I found a hair in my soup. (tek tel)"
+ },
+ {
+  "id": 40,
+  "kategori": "Edat",
+  "baslik": "\"Bir şeyi tartışmak\" derken",
+  "yanlis": "Let's discuss about the plan.",
+  "dogru": "Let's discuss the plan.",
+  "neden": "\"Discuss\" doğrudan nesne alır, \"about\" eklenmez. \"Talk about\" ise doğru.",
+  "bonus": "Let's talk about the plan."
+ },
+ {
+  "id": 41,
+  "kategori": "Kelime",
+  "baslik": "\"Sigara içmek\" derken",
+  "yanlis": "Do you drink cigarettes?",
+  "dogru": "Do you smoke?",
+  "neden": "İngilizcede sigara \"içilmez\". \"Smoke\" fiili tek başına yeter.",
+  "bonus": "I quit smoking."
+ },
+ {
+  "id": 42,
+  "kategori": "Sıfat",
+  "baslik": "\"Kafam karıştı\" derken",
+  "yanlis": "I'm confusing.",
+  "dogru": "I'm confused.",
+  "neden": "Bu da -ed/-ing farkı. \"I'm confusing\" = \"Ben kafa karıştırıcı biriyim.\"",
+  "bonus": "This map is confusing."
+ },
+ {
+  "id": 43,
+  "kategori": "Edat",
+  "baslik": "\"Odaya girmek\" derken",
+  "yanlis": "He entered to the room.",
+  "dogru": "He entered the room.",
+  "neden": "\"Enter\" doğrudan nesne alır. \"Odaya\"daki \"-ya\" ekini \"to\" diye çevirme.",
+  "bonus": "He came into the room."
+ },
+ {
+  "id": 44,
+  "kategori": "Yalancı eş",
+  "baslik": "\"Apartmanda oturuyorum\" derken",
+  "yanlis": "Our apartment has 8 floors.",
+  "dogru": "Our building has 8 floors.",
+  "neden": "İngilizcede \"apartment\" tek bir daire demek. Türkçedeki \"apartman\" binanın tamamı.",
+  "bonus": "I live in a flat on the 3rd floor. (UK)"
+ },
+ {
+  "id": 45,
+  "kategori": "Olumsuz",
+  "baslik": "\"Hiçbir şey bilmiyorum\" derken",
+  "yanlis": "I don't know nothing.",
+  "dogru": "I don't know anything.",
+  "neden": "İngilizcede tek olumsuzluk yeter. \"Don't\" varsa \"anything\" gelir.",
+  "bonus": "I know nothing. (aynı anlam)"
+ },
+ {
+  "id": 46,
+  "kategori": "Yaş",
+  "baslik": "\"20 yaşındayım\" derken",
+  "yanlis": "I am 20 years.",
+  "dogru": "I'm 20. / I'm 20 years old.",
+  "neden": "\"Years\" diyeceksen sonuna \"old\" eklemelisin. En doğalı sadece sayıyı söylemek.",
+  "bonus": "How old are you?"
+ },
+ {
+  "id": 47,
+  "kategori": "Edat",
+  "baslik": "\"Bana kızgın\" derken",
+  "yanlis": "Are you angry to me?",
+  "dogru": "Are you angry with me?",
+  "neden": "Birine kızgın olmak \"angry with\" (ABD'de \"angry at\"). Bir duruma kızgın olmak \"angry about\".",
+  "bonus": "I'm angry about the delay."
+ },
+ {
+  "id": 48,
+  "kategori": "Zaman",
+  "baslik": "\"O her gün gider\" derken",
+  "yanlis": "She go to work every day.",
+  "dogru": "She goes to work every day.",
+  "neden": "Geniş zamanda he/she/it ile fiile -s eklenir. En sık unutulan küçük harf.",
+  "bonus": "He doesn't like coffee."
+ },
+ {
+  "id": 49,
+  "kategori": "Kelime",
+  "baslik": "\"Uyumaya gidiyorum\" derken",
+  "yanlis": "I'm going to the bed.",
+  "dogru": "I'm going to bed.",
+  "neden": "\"Go to bed\" kalıp ifade, \"the\" almaz. School, work ve church de öyle.",
+  "bonus": "go to school · go to work"
+ },
+ {
+  "id": 50,
+  "kategori": "Kelime",
+  "baslik": "\"Fikrimi değiştirdim\" derken",
+  "yanlis": "I changed my idea.",
+  "dogru": "I changed my mind.",
+  "neden": "Karar değiştirmek İngilizcede \"change your mind\" ile söylenir.",
+  "bonus": "Make up your mind! = Karar ver!"
+ },
+ {
+  "id": 51,
+  "kategori": "Soru",
+  "baslik": "\"Ne kadar zamandır?\" derken",
+  "yanlis": "How much time are you here?",
+  "dogru": "How long have you been here?",
+  "neden": "Süre sorarken \"how long\" ve present perfect kullanılır.",
+  "bonus": "How long does it take?"
+ }
+]

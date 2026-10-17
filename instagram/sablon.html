@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1080px;height:1350px;background:#fdf6ec;font-family:Figtree,sans-serif;color:#1c1f2b;display:flex;flex-direction:column;padding:84px 84px 72px}
+.top{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:30px;letter-spacing:.06em;text-transform:uppercase;color:#6b6f80}
+.no{background:#1c1f2b;color:#fdf6ec;padding:10px 22px;border-radius:999px;letter-spacing:.02em}
+h1{font:800 76px/1.05 "Bricolage Grotesque",sans-serif;margin:70px 0 60px;letter-spacing:-.02em}
+.box{border-radius:32px;padding:44px 50px;display:flex;gap:30px;align-items:center;font:700 64px/1.1 "Bricolage Grotesque",sans-serif}
+.box .ic{flex:none;width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font:800 50px Figtree;color:#fff}
+.bad{background:#fde1dc;color:#9b2c1c}.bad .ic{background:#e04a32}
+.bad span.t{text-decoration:line-through;text-decoration-thickness:6px;text-decoration-color:#e04a3299}
+.good{background:#dcf1e3;color:#17603a;margin-top:26px}.good .ic{background:#24935a}
+.why{margin-top:56px;font-size:36px;line-height:1.45;color:#3a3e4f;font-weight:500}
+.why b{color:#1c1f2b}
+.foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:30px;font-weight:700;color:#6b6f80}
+.save{background:#ffd34d;color:#1c1f2b;padding:14px 26px;border-radius:16px}
+</style></head><body>
+<div class="top"><span>Türklerin yaptığı hata</span><span class="no" id="no"></span></div>
+<h1 id="baslik"></h1>
+<div class="box bad"><div class="ic">✕</div><span class="t" id="yanlis"></span></div>
+<div class="box good"><div class="ic">✓</div><span id="dogru"></span></div>
+<p class="why"><b>Neden?</b> <span id="neden"></span><span id="bonus-wrap"><br><br><b>Bonus:</b> <span id="bonus"></span></span></p>
+<div class="foot"><span id="hesap"></span><span class="save">Kaydet, unutma 🔖</span></div>
+<script>
+// render.mjs fills the card through window.fill(item, handle)
+window.fill = (x, handle) => {
+  const set = (id, v) => document.getElementById(id).textContent = v;
+  set('no', '#' + String(x.id).padStart(2, '0'));
+  set('baslik', x.baslik); set('yanlis', x.yanlis); set('dogru', x.dogru);
+  set('neden', x.neden); set('hesap', handle);
+  document.getElementById('bonus-wrap').hidden = !x.bonus;
+  if (x.bonus) set('bonus', x.bonus);
+  // Long sentences get a smaller size so they stay on one or two lines
+  const len = Math.max(x.yanlis.length, x.dogru.length);
+  const size = len <= 18 ? 64 : len <= 26 ? 54 : len <= 34 ? 46 : 40;
+  document.querySelectorAll('.box').forEach(b => b.style.fontSize = size + 'px');
+  document.getElementById('baslik').style.fontSize = x.baslik.length > 30 ? '60px' : '76px';
+};
+</script>
+</body></html>

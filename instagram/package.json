@@ -1,0 +1,7 @@
+{
+  "name": "ingilizce-hatalar-bot",
+  "private": true,
+  "type": "module",
+  "scripts": { "kartlar": "node render.mjs" },
+  "dependencies": { "playwright": "1.56.1" }
+}
