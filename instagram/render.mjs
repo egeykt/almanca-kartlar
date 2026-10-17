@@ -4,7 +4,7 @@ import { readFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 const dir = fileURLToPath(new URL('.', import.meta.url));
 const items = JSON.parse(readFileSync(dir + 'hatalar.json', 'utf8'));
-const [handle = '@hesap_adin', ...ids] = process.argv.slice(2);
+const [handle = '@turkce_dusunme', ...ids] = process.argv.slice(2);
 const pick = ids.length ? items.filter(x => ids.includes(String(x.id))) : items;
 mkdirSync(dir + 'kartlar', { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/opt/pw-browsers/chromium' });
