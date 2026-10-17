@@ -39,6 +39,7 @@
   --shadow: none; color-scheme: dark;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
@@ -105,6 +106,7 @@ main { padding-block: 18px 60px; }
 .card h3 { margin: 0; font: 600 19px/1.2 var(--display); letter-spacing: -.01em; }
 .meta { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .card .ings { margin: 0; font-size: 13px; color: var(--muted); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.pro { margin: 0; font-size: 12px; font-weight: 600; color: var(--tomato); font-variant-numeric: tabular-nums; }
 .mine { font-size: 11px; color: var(--muted); border: 1px dashed var(--line); border-radius: 6px; padding: 0 6px; }
 
 .empty { border: 1px dashed var(--line); border-radius: var(--r); padding: 28px 20px; text-align: center; color: var(--muted); }
@@ -269,6 +271,7 @@ const UNITS = ['su bardağı', 'yemek kaşığı', 'tatlı kaşığı', 'çay ka
   .sort((a, b) => b.length - a.length);
 const WATER = new Set(['su', 'sıcak su', 'soğuk su', 'ılık su']);
 const BASICS = new Set(['tuz', 'karabiber', 'pul biber', 'kimyon', 'kekik', 'tarçın', 'nane', 'sıvı yağ', 'zeytinyağı', 'şeker']);
+const PRO = 'Yüksek protein';
 const CUPS = new Set(['su bardağı', 'yemek kaşığı', 'tatlı kaşığı', 'çay kaşığı']);
 
 // Market names abroad: [English, German]
@@ -286,7 +289,8 @@ const DICT = {
   'salatalık': ['cucumber', 'Gurke'], 'maydanoz': ['flat-leaf parsley', 'glatte Petersilie'], 'yoğurt': ['plain yogurt (Greek style)', 'Joghurt (türkisch/griechisch)'],
   'nane': ['dried mint', 'getrocknete Minze'], 'yulaf ezmesi': ['rolled oats', 'Haferflocken'], 'süt': ['milk', 'Milch'],
   'muz': ['banana', 'Banane'], 'bal': ['honey', 'Honig'], 'tarçın': ['cinnamon', 'Zimt'], 'irmik': ['semolina', 'Hartweizengrieß'],
-  'şeker': ['sugar', 'Zucker'], 'elma': ['apple', 'Apfel'], 'ekmek': ['bread', 'Brot'], 'peynir': ['cheese', 'Käse'], 'un': ['flour', 'Mehl']
+  'şeker': ['sugar', 'Zucker'], 'brokoli': ['broccoli', 'Brokkoli'], 'basmati pirinç': ['basmati rice', 'Basmatireis'],
+  'konserve nohut': ['canned chickpeas', 'Kichererbsen (Dose)'], 'tatlı toz biber': ['sweet paprika', 'Paprikapulver edelsüß'], 'elma': ['apple', 'Apfel'], 'ekmek': ['bread', 'Brot'], 'peynir': ['cheese', 'Käse'], 'un': ['flour', 'Mehl']
 };
 
 const SEED = [
@@ -349,7 +353,31 @@ const SEED = [
   { id: 'irmik', name: 'İrmik helvası', cat: 'Tatlı', time: 30, serves: 4, level: 'Orta',
     ings: ['1 su bardağı irmik', '3 yemek kaşığı tereyağı', '1 su bardağı süt', '1 su bardağı su', '0,75 su bardağı şeker'],
     steps: ['Süt, su ve şekeri bir tencerede şeker eriyene kadar ısıt.', 'Başka bir tencerede tereyağını erit, irmiği ekle.', 'Kısık ateşte sürekli karıştırarak irmiği açık kahverengi olana kadar 12-15 dakika kavur.', 'Sıcak şerbeti dikkatlice ekle (sıçrar) ve karıştır. Kapağı kapat, kısık ateşte 5 dakika demlendir.'],
-    tip: 'Tadı kavurmadan gelir, acele etme. İngiltere\'de "semolina", Almanya\'da "Hartweizengrieß" diye satılır.' }
+    tip: 'Tadı kavurmadan gelir, acele etme. İngiltere\'de "semolina", Almanya\'da "Hartweizengrieß" diye satılır.' },
+  { id: 'basmati', name: 'Zeytinyağlı basmati pilavı', cat: 'Pilav & makarna', time: 30, serves: 3, level: 'Kolay',
+    ings: ['1 su bardağı basmati pirinç', '1,25 su bardağı sıcak su', '2 yemek kaşığı zeytinyağı', '1 çay kaşığı tuz'],
+    steps: ['Pirinci suyu berraklaşana kadar 3-4 kez yıka, 20 dakika suda beklet ve iyice süz.', 'Zeytinyağını tencerede ısıt, pirinci ekleyip 2 dakika kırmadan çevir.', 'Sıcak suyu ve tuzu ekle. Kaynayınca en kısık ateşe al, kapağı kapalı 12 dakika pişir.', 'Ocaktan al, kapağın altına kağıt havlu koyup 10 dakika demlendir. Çatalla havalandırarak servis et.'],
+    tip: 'Basmati, Türk pirincinden az su ister. Su fazla gelirse lapa olur. Tavuk yemeklerinin yanına çok iyi gider.' },
+  { id: 'brokoli', name: 'Limonlu zeytinyağlı brokoli', cat: 'Salata & meze', time: 15, serves: 2, level: 'Kolay',
+    ings: ['1 adet brokoli', '2 yemek kaşığı zeytinyağı', '1 diş sarımsak', '0,5 adet limon', 'tuz', 'pul biber'],
+    steps: ['Brokoliyi küçük çiçeklerine ayır, sapını soyup ince doğra.', 'Tuzlu kaynar suda 3-4 dakika haşla; yeşil ve hafif diri kalsın. Süz.', 'Zeytinyağı, ezilmiş sarımsak, limon suyu ve tuzla karıştır, pul biber serp.'],
+    tip: 'Fazla haşlarsan sararır ve lapa olur. Fırında da olur: zeytinyağıyla 220 °C\'de 15 dakika.' },
+  { id: 'tavukbrokoli', name: 'Tavada tavuk ve brokoli', cat: 'Ana yemek', time: 25, serves: 2, level: 'Kolay', protein: 60,
+    ings: ['500 g tavuk göğsü', '1 adet brokoli', '2 diş sarımsak', '1 yemek kaşığı zeytinyağı', '1 çay kaşığı tatlı toz biber', 'tuz', 'karabiber'],
+    steps: ['Tavuğu küp doğra, toz biber, tuz ve karabiberle harmanla.', 'Brokoliyi çiçeklerine ayır, kaynar suda 2 dakika haşlayıp süz.', 'Tavayı iyice ısıt, yağı ekle. Tavuğu yüksek ateşte her yüzü kızarana kadar 7-8 dakika pişir.', 'Sarımsak ve brokoliyi ekle, 3 dakika daha çevir.'],
+    tip: 'Antrenman sonrası için ideal. Basmati pilavıyla tam bir öğün olur.' },
+  { id: 'yogurtlutavuk', name: 'Yoğurtlu fırın tavuk', cat: 'Ana yemek', time: 40, serves: 3, level: 'Kolay', protein: 48,
+    ings: ['600 g tavuk göğsü', '200 g yoğurt', '1 yemek kaşığı domates salçası', '2 diş sarımsak', '1 yemek kaşığı zeytinyağı', '1 çay kaşığı tatlı toz biber', '1 çay kaşığı kekik', 'tuz'],
+    steps: ['Yoğurt, salça, ezilmiş sarımsak, zeytinyağı ve baharatları karıştır.', 'Tavuğu iri küp doğra, sosa bula. En az 30 dakika, mümkünse bir gece buzdolabında beklet.', 'Fırını 220 °C\'ye ısıt. Tavukları yağlı kağıt serili tepsiye aralıklı diz.', '20-25 dakika, kenarları kızarana kadar pişir.'],
+    tip: 'Yoğurt eti yumuşatır, göğüs eti kurumaz. Akşamdan marine edip sabah fırına atabilirsin.' },
+  { id: 'tavuknohut', name: 'Tavuklu nohut sote', cat: 'Ana yemek', time: 25, serves: 2, level: 'Kolay', protein: 55,
+    ings: ['400 g tavuk göğsü', '1 kutu konserve nohut', '1 adet soğan', '1 adet sivri biber', '1 yemek kaşığı domates salçası', '1 yemek kaşığı zeytinyağı', '1 çay kaşığı kimyon', 'tuz'],
+    steps: ['Tavuğu küp doğra, nohudu süzüp durula.', 'Tavuğu yağda yüksek ateşte 6-7 dakika kızart.', 'Doğranmış soğan ve biberi ekle, 3 dakika pişir.', 'Salça, nohut ve yarım su bardağı su ekle, 5 dakika pişir. Kimyon ve tuzla bitir.'],
+    tip: 'Nohut ekstra protein ve lif ekler, uzun süre tok tutar.' },
+  { id: 'tavukbowl', name: 'Haftalık tavuk ve pilav kutuları', cat: 'Ana yemek', time: 45, serves: 3, level: 'Kolay', protein: 45,
+    ings: ['500 g tavuk göğsü', '1 su bardağı basmati pirinç', '1,25 su bardağı sıcak su', '1 adet brokoli', '2 yemek kaşığı zeytinyağı', '1 çay kaşığı tatlı toz biber', '1 çay kaşığı kekik', 'tuz', 'karabiber'],
+    steps: ['Basmati pirinci "Zeytinyağlı basmati pilavı" tarifindeki gibi pişir.', 'Fırını 200 °C\'ye ısıt. Tavuğu yağ ve baharatlarla harmanla, brokoliyle aynı tepsiye koy.', '20 dakika, tavuk pişip brokolinin uçları kızarana kadar fırınla.', 'Pilavı, tavuğu ve brokoliyi 3 saklama kabına eşit böl. Soğuyunca buzdolabına koy.'],
+    tip: 'Buzdolabında 3 gün dayanır. Pazar günü hazırlarsan hafta içi akşamları hazır yemeğin olur.' }
 ];
 
 // ---------- helpers ----------
@@ -415,7 +443,9 @@ function load() {
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 let S = load() || { recipes: SEED.map(mk), shop: [], have: [], lang: 'tr' };
-S.shop ||= []; S.have ||= []; S.lang ||= 'tr';
+S.shop ||= []; S.have ||= []; S.lang ||= 'tr'; S.removed ||= [];
+// Recipes added in later versions reach users who already have saved data
+SEED.forEach(r => { if (!S.recipes.some(x => x.id === r.id) && !S.removed.includes(r.id)) S.recipes.push(mk(r)); });
 let view = 'recipes', catF = 'Tümü', cur = null;
 
 // ---------- render ----------
@@ -429,12 +459,12 @@ function renderTabs() {
 
 function renderRecipes() {
   const favs = S.recipes.some(r => r.fav);
-  const cats = ['Tümü', ...(favs ? ['★ Favoriler'] : []), ...CATS.filter(c => S.recipes.some(r => r.cat === c))];
+  const cats = ['Tümü', ...(favs ? ['★ Favoriler'] : []), ...(S.recipes.some(r => r.protein) ? [PRO] : []), ...CATS.filter(c => S.recipes.some(r => r.cat === c))];
   if (!cats.includes(catF)) catF = 'Tümü';
   $('#cats').innerHTML = cats.map(c => `<button class="chip" data-act="cat" data-v="${esc(c)}" aria-pressed="${c === catF}">${esc(c)}</button>`).join('');
   const q = low($('#q').value);
   const list = S.recipes.filter(r =>
-    (catF === 'Tümü' || (catF === '★ Favoriler' ? r.fav : r.cat === catF)) &&
+    (catF === 'Tümü' || (catF === '★ Favoriler' ? r.fav : catF === PRO ? r.protein : r.cat === catF)) &&
     (!q || low(r.name).includes(q) || r.ings.some(i => low(i.n).includes(q))))
     .sort((a, b) => (b.fav - a.fav) || a.name.localeCompare(b.name, 'tr'));
   $('#list').innerHTML = list.length ? list.map(r => `
@@ -443,6 +473,7 @@ function renderRecipes() {
         <button class="star ${r.fav ? 'on' : ''}" data-act="fav" data-id="${r.id}" aria-label="Favori" aria-pressed="${!!r.fav}">${r.fav ? '★' : '☆'}</button></div>
       <h3>${esc(r.name)}</h3>
       <p class="meta"><span>${r.time} dk</span><span>${r.serves} kişilik</span><span>${esc(r.level)}</span>${r.builtin ? '' : '<span class="mine">benim</span>'}</p>
+      ${r.protein ? `<p class="pro">≈ ${r.protein} g protein / porsiyon</p>` : ''}
       <p class="ings">${esc(r.ings.filter(i => !BASICS.has(low(i.n)) && !isWater(i.n)).map(i => i.n).join(', '))}</p>
     </article>`).join('')
     : `<div class="empty" style="grid-column:1/-1"><strong>Bu aramaya uyan tarif yok</strong>Başka bir kelime dene ya da "+ Yeni tarif" ile kendin ekle.</div>`;
@@ -515,7 +546,8 @@ function showRecipe(id, serves) {
   openDlg(`<div class="sheet">
     <div class="sheet-head">
       <div><span class="cat">${esc(r.cat)}</span><h2>${esc(r.name)}</h2>
-        <p class="meta"><span>${r.time} dk</span><span>${esc(r.level)}</span></p></div>
+        <p class="meta"><span>${r.time} dk</span><span>${esc(r.level)}</span></p>
+        ${r.protein ? `<p class="pro">≈ ${r.protein} g protein / porsiyon</p>` : ''}</div>
       <button class="close" data-act="close" aria-label="Kapat">×</button>
     </div>
     <div class="actions" style="align-items:center;justify-content:space-between">
@@ -643,6 +675,7 @@ document.addEventListener('click', e => {
     }
     case 'edit': showForm(r); break;
     case 'del': arm(el, 'Silmek için tekrar dokun', () => {
+      if (r.builtin) S.removed.push(r.id);
       S.recipes = S.recipes.filter(x => x.id !== r.id); save(); closeDlg(); toast('Tarif silindi');
     }); break;
     case 'new': showForm(null); break;
